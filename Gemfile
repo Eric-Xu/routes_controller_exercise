@@ -9,11 +9,16 @@ gem 'sqlite3'
 
 gem 'ffaker'
 
-
 gem 'thin'
 
 gem 'quiet_assets', :group => :development
 
+# Added these two gems because the current version of eventmachine 0.12.10 
+# is known to cause an error on Windows. Run 'bundle install' from the project's
+# App directory. If error 'The bundle currently has eventmachine locked at 0.12.10.'
+# then delete the project's Gemfile.lock and re-do a bundle install.
+gem 'eventmachine', '1.0.0.beta.4.1'
+gem 'guard-livereload'
 
 # Gems used only for assets and not required
 # in production environments by default.

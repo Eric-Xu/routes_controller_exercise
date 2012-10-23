@@ -27,6 +27,11 @@ Once on your local machine you will need to navigate to the project directory an
 
     $ bundle install
 
+    <I got an error message when I ran this because Windows 7 could not install the current version of the eventmachine 0.12.10 gem. A different version of eventmachine needs to be installed to fix this. Under the project's Gemfile I added:
+        gem 'eventmachine', '1.0.0.beta.4.1'
+        gem 'guard-livereload'
+    Now run 'bundle install' from the project's App directory. If error 'The bundle currently has eventmachine locked at 0.12.10.' then delete the project's Gemfile.lock and re-do a bundle install. The problem was fixed!>
+
 This might take awhile, afterwards  you will need to run:
 
     $ rake db:create
