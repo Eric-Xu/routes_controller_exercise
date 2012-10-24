@@ -272,6 +272,7 @@ By now you should have several ERB blocks that have a variable assignment in the
     <% first_product = Product.first %>
 
 Try moving one or more to different places in the view file, what happens? What if you move one of them to the bottom? What if you move ALL of them to the top? Does one break? Does one look/feel better?
+    A: It throws an error if a variable is declared after a statement calling it.
 
 Commit the results to git.
 

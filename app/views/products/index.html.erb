@@ -1,3 +1,21 @@
+<% first_product = Product.first %> 
+<p>
+  Product Name: "<%= first_product.name %>" costs $<%= first_product.price %>
+</p>
+
+<p>
+  The seller for this product is named '<%= first_product.user.name %>'.
+</p>
+
+<% cheap_product = Product.where('price > 1').first %>
+<p>
+  The cheap product's name is <%= cheap_product.name %> and costs $<%= cheap_product.price %>.
+</p>
+
+<p>
+  There are a total of <%= Product.count %> products in our catalogue!
+</p>
+
 <h2> I AMA View </h2>
 <h2> Hello world </h2>
 <p>
